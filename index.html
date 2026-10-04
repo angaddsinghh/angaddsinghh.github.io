@@ -167,47 +167,6 @@
             animation: appear 1s ease both;
         }
 
-        .avatar {
-            width: 112px;
-            height: 112px;
-            margin: 0 auto 25px;
-
-            border-radius: 50%;
-            object-fit: cover;
-
-            border: 2px solid rgba(0, 255, 102, 0.45);
-
-            box-shadow:
-                0 0 0 8px rgba(0, 255, 102, 0.035),
-                0 0 45px rgba(0, 255, 102, 0.22);
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            padding: 7px 13px;
-
-            color: var(--green-soft);
-            background: rgba(0, 255, 102, 0.06);
-            border: 1px solid rgba(0, 255, 102, 0.13);
-            border-radius: 999px;
-
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            margin-bottom: 22px;
-        }
-
-        .status-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--green);
-            box-shadow: 0 0 12px var(--green);
-        }
-
         h1 {
             font-size: clamp(3rem, 9vw, 7rem);
             line-height: 0.95;
@@ -638,22 +597,11 @@
 
         <!-- =========================
              HERO
-        ========================== -->
+    ========================== -->
 
         <section class="hero">
 
             <div class="hero-content">
-
-                <img
-                    class="avatar"
-                    src="profile.jpg"
-                    alt="Angad Singh"
-                >
-
-                <div class="eyebrow">
-                    <span class="status-dot"></span>
-                    Building things
-                </div>
 
                 <h1>
                     Angad<br>
@@ -682,7 +630,7 @@
 
         <!-- =========================
              PROJECTS
-        ========================== -->
+    ========================== -->
 
         <section id="projects" class="reveal">
 
@@ -809,7 +757,7 @@
 
         <!-- =========================
              ABOUT
-        ========================== -->
+    ========================== -->
 
         <section id="about" class="reveal">
 
@@ -837,7 +785,7 @@
 
         <!-- =========================
              SOCIALS
-        ========================== -->
+    ========================== -->
 
         <section id="socials" class="reveal">
 
@@ -938,7 +886,7 @@
 
         /* =========================
            CURRENT YEAR
-        ========================== */
+        ========================= */
 
         document.getElementById("year").textContent =
             new Date().getFullYear();
@@ -946,7 +894,7 @@
 
         /* =========================
            SCROLL REVEAL
-        ========================== */
+        ========================= */
 
         const revealElements =
             document.querySelectorAll(".reveal");
@@ -979,7 +927,7 @@
 
         /* =========================
            VIDEO FALLBACK
-        ========================== */
+        ========================= */
 
         const video =
             document.querySelector(".background video");
