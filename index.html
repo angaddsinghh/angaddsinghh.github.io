@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>angad singh | developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nerd-fonts/3.2.1/css/nerd-fonts.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        matrix: {
+                            green: '#00ff66',
+                            cyan: '#00ffff',
+                            dark: '#050a07',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050a07;
+            color: #cbd5e1;
+            overflow-x: hidden;
+        }
 
+        .matrix-glow {
+            text-shadow: 0 0 12px rgba(0, 255, 102, 0.5), 0 0 24px rgba(0, 255, 102, 0.2);
+        }
+
+        .cyan-glow {
+            text-shadow: 0 0 12px rgba(0, 255, 255, 0.5), 0 0 24px rgba(0, 255, 255, 0.2);
+        }
+
+        .glass-card {
+            background: rgba(8, 16, 11, 0.82);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(0, 255, 102, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 255, 102, 0.6);
+            box-shadow: 0 14px 40px rgba(0, 255, 102, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(3, 7, 5, 0.94) 0%, rgba(1, 4, 2, 0.97) 100%);
+            z-index: -1;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050a07;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00ff6644;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff6688;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-matrix-green selection:text-black">
+
+    <video autoplay muted loop playsinline class="video-bg">
+        <source src="https://motionbgs.com/media/4260/matrix-rain-codes.960x540.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
+    <header class="w-full py-6 px-6 md:px-12 flex justify-between items-center z-10 border-b border-matrix-green/20 backdrop-blur-md">
+        <a href="#" class="font-mono text-lg font-bold text-matrix-green matrix-glow flex items-center gap-2">
+            <span class="text-matrix-cyan">&gt;</span> angad@terminal:~#
+        </a>
+        <nav class="flex gap-6 md:gap-8 font-mono text-sm">
+            <a href="#about" class="text-slate-300 hover:text-matrix-green transition-colors">~/about</a>
+            <a href="#projects" class="text-slate-300 hover:text-matrix-green transition-colors">~/projects</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow flex flex-col items-center justify-center px-6 py-16 z-10 max-w-5xl mx-auto w-full">
+        
+        <section id="about" class="text-center my-10 w-full">
+            <div class="inline-block px-4 py-1 mb-6 rounded-full font-mono text-xs text-matrix-green bg-matrix-green/10 border border-matrix-green/30">
+                STATUS: actively coding
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
+                angad singh
+            </h1>
+            
+            <p class="font-mono text-lg md:text-xl text-matrix-cyan cyan-glow mb-6">
+                software developer &amp; foss addict
+            </p>
+
+            <p class="max-w-2xl mx-auto text-slate-300 text-base md:text-lg mb-10 leading-relaxed font-sans">
+                passionate about coding open source software and creating high quality apps
+            </p>
+
+            <div class="flex flex-wrap justify-center items-center gap-3.5 py-4 max-w-3xl mx-auto">
+                <a href="https://t.me/angadstechcircle" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                    <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+                </a>
+                <a href="https://matrix.to/#/@angad:mozilla.org" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                    <img src="https://img.shields.io/badge/Matrix-000000?style=for-the-badge&logo=matrix&logoColor=white" alt="Matrix">
+                </a>
+                <a href="https://x.com/angaddsinghh" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                    <img src="https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white" alt="Twitter">
+                </a>
+                <a href="https://youtube.com/@angadddd" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
+                </a>
+                <a href="mailto:angadsingh0@proton.me" class="transition-transform hover:scale-105">
+                    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=maildotru&logoColor=white" alt="Email">
+                </a>
+                <a href="https://github.com/angaddsinghh/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+                </a>
+            </div>
+        </section>
+
+        <section id="projects" class="w-full my-12">
+            <div class="flex items-center gap-4 mb-10">
+                <h2 class="font-mono text-2xl md:text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="text-matrix-green">#</span> Featured Projects
+                </h2>
+                <div class="flex-grow h-[1px] bg-matrix-green/30"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Dotfiles (macOS Yabai) -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-xl bg-matrix-green/10 border border-matrix-green/30 text-matrix-green font-mono text-lg">
+                                &#xe711;
+                            </div>
+                            <span class="font-mono text-xs px-3 py-1 rounded-full bg-matrix-green/20 text-matrix-green border border-matrix-green/40">
+                                macos / yabai
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-matrix-green transition-colors">
+                            macos dotfiles
+                        </h3>
+                        
+                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6 font-sans">
+                            custom macos environment configuration with yabai, skhd, and a terminal
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2.5 py-1 rounded-md bg-black/50 border border-slate-700 font-mono text-xs text-matrix-green">macos</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/50 border border-slate-700 font-mono text-xs text-matrix-cyan">yabai</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/50 border border-slate-700 font-mono text-xs text-slate-300">fish</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                        <span class="font-mono text-xs text-slate-400">Configuration</span>
+                        <a href="https://github.com/angaddsinghh" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-matrix-green hover:underline flex items-center gap-1 font-semibold">
+                            view repo &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Galaxy News (Flutter RSS Reader) -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 rounded-xl bg-matrix-cyan/10 border border-matrix-cyan/30 text-matrix-cyan font-mono text-lg">
+                                &#xf09e;
+                            </div>
+                            <span class="font-mono text-xs px-3 py-1 rounded-full bg-matrix-cyan/20 text-matrix-cyan border border-matrix-cyan/40">
+                                FLUTTER / RSS
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-matrix-cyan transition-colors">
+                            Galaxy News
+                        </h3>
+                        
+                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6 font-sans">
+                            galaxy news is my fast cross platform rss reader app under gpl 2
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2.5 py-1 rounded-md bg-black/50 border border-slate-700 font-mono text-xs text-matrix-cyan">flutter</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/50 border border-slate-700 font-mono text-xs text-matrix-green">dart</span>
+                            <span class="px-2.5 py-1 rounded-md bg-black/50 border border-slate-700 font-mono text-xs text-slate-300">gpl 2</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                        <span class="font-mono text-xs text-slate-400">Open Source App</span>
+                        <a href="https://github.com/angaddsinghh" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-matrix-cyan hover:underline flex items-center gap-1 font-semibold">
+                            view app &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full py-6 px-6 text-center font-mono text-xs text-slate-500 border-t border-matrix-green/10 z-10 backdrop-blur-md">
+        &copy; 2026 angad singh &bull; pushing to main in my underwear at 3am
+    </footer>
+
+</body>
+</html>
